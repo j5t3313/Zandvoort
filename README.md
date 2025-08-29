@@ -200,7 +200,7 @@ The system generates analysis plots:
 - **Increased Sample Size**: Combined sessions provide more reliable statistics
 - **Session-Specific Analysis**: Tracks which session contributed to each parameter
 
-### Improved Fallback System
+### Fallback System
 - **Intelligent Degradation**: Practice models → Historical extraction → Defaults
 - **Quality Transparency**: Clear indication of data source reliability
 - **Graceful Handling**: System remains functional even with limited data
