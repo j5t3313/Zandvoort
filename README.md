@@ -112,7 +112,7 @@ The simulation is tuned for Circuit Zandvoort characteristics:
 | Base Lap Time | 71.0s | Historical data |
 | Race Distance | 72 laps | Official |
 | Pit Time Loss | 16.5s | Approximation based on historical data + new pitlane speed limit for 2025 |
-| Rain Probability | 30% | Open Weather API |
+| Rain Probability | 10% | Open Weather API has a 0% chance at lights out, but I upped to 10% |
 | Safety Car Rate | 67% | Historical data |
 | Overtaking Difficulty | High | Banking/narrow track |
 
