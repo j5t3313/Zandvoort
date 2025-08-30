@@ -493,6 +493,11 @@ def plot_strategy_analysis_with_practice_models(results, grid_positions, model_i
         if i == 2:  
             ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=9)
         ax.grid(True, alpha=0.3)
+        
+        # Add minimal watermark
+        ax.text(0.99, 0.01, 'j5t3313', transform=ax.transAxes,
+               fontsize=8, color='lightgray', alpha=0.4,
+               ha='right', va='bottom')
     
     plt.tight_layout()
     plt.show()
@@ -536,6 +541,11 @@ def plot_strategy_analysis_with_practice_models(results, grid_positions, model_i
             
             ax2.text(0.02, 0.98, quality_text, transform=ax2.transAxes, 
                     verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
+            
+            
+            ax2.text(0.99, 0.01, 'j5t3313', transform=ax2.transAxes,
+                   fontsize=8, color='lightgray', alpha=0.4,
+                   ha='right', va='bottom')
             
             plt.tight_layout()
             plt.show()
