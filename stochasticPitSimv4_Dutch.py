@@ -64,7 +64,7 @@ if not PARAMETERS_LOADED:
 ZANDVOORT_PARAMS = {
     'base_pace': 71.0,
     'num_laps': 72,
-    'rain_probability': 0.30, #to be updated closer to race day
+    'rain_probability': 0.10, # 0% in forecast, upped to 10% for room for error
     'sc_probability': 0.67,
     'vsc_probability': 0.67,
     'pit_time_loss': 16.5, # pitlane speed limit increased to 80kph
