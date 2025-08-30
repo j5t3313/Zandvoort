@@ -187,7 +187,7 @@ class F1ModelValidator:
             import os
             
             # Try to import the simulation functions
-            from stochasticPitSimv3_Dutch import (
+            from stochasticPitSimv4_Dutch import (
                 all_strategies, run_monte_carlo_with_grid, compound_models,
                 ZANDVOORT_PARAMS
             )
@@ -690,6 +690,10 @@ class F1ModelValidator:
         
         # Adjust layout to prevent overlapping
         plt.subplots_adjust(left=0.08, bottom=0.12, right=0.95, top=0.90, wspace=0.25, hspace=0.35)
+
+        ax2.text(0.99, 0.01, 'j5t3313', transform=ax2.transAxes,
+                   fontsize=8, color='lightgray', alpha=0.4,
+                   ha='right', va='bottom')
         plt.show()
     
     def generate_comprehensive_validation_report(self):
