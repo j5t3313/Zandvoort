@@ -64,7 +64,7 @@ if not PARAMETERS_LOADED:
 ZANDVOORT_PARAMS = {
     'base_pace': 71.0,
     'num_laps': 72,
-    'rain_probability': 0.10, # 0% in forecast, upped to 10% for room for error
+    'rain_probability': 0.0, # 0% in forecast, upped to 10% for room for error
     'sc_probability': 0.67,
     'vsc_probability': 0.67,
     'pit_time_loss': 16.5, # pitlane speed limit increased to 80kph
@@ -352,6 +352,11 @@ dry_strategies = {
         {"compound": "SOFT", "laps": 18},
         {"compound": "HARD", "laps": 35},
         {"compound": "SOFT", "laps": 19}
+    ],
+    "2-stop (M-H-H)": [
+        {"compound": "MEDIUM", "laps": 18},
+        {"compound": "HARD", "laps": 30},
+        {"compound": "HARD", "laps": 24}
     ]
 }
 
@@ -480,7 +485,7 @@ def plot_strategy_analysis_with_practice_models(results, grid_positions, model_i
     colors = plt.cm.Set3(np.linspace(0, 1, len(all_strategies)))
     strategy_colors = dict(zip(all_strategies.keys(), colors))
     
-    for i, grid_pos in enumerate([1, 5, 10]):
+    for i, grid_pos in enumerate([1, 6, 7]):
         ax = axes1[i]
         for strategy_name in all_strategies.keys():
             times = results[grid_pos][strategy_name]['times']
@@ -551,7 +556,7 @@ def plot_strategy_analysis_with_practice_models(results, grid_positions, model_i
             plt.show()
 
 # Run simulations with practice-based tire models
-key_positions = [1, 3, 5, 8, 10, 15]
+key_positions = [1, 3, 5, 6, 7, 8, 10, 15]
 print("\n" + "="*80)
 print("RUNNING MONTE CARLO SIMULATION WITH PRACTICE-BASED TIRE MODELS")
 print("="*80)
